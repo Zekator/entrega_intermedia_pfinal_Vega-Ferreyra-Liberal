@@ -57,3 +57,7 @@ def sport(request):
 
 def contact_us(request):
     contact_us = Contact_us.objets.all()
+    
+
+def profesorsFormulario(request):
+    return render(request, "app_coder/cursoFormulario.html")
