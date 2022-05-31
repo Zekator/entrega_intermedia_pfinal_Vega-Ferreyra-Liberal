@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.forms.models import model_to_dict
 from django.http import HttpResponse, request
 from django.template import loader
-from app_coder.models import Sport, Partner, Profesor
+from app_coder.models import Sport, Partner, Profesor, Contact_us
 #from app_coder.forms import SportForm, ProfesorForm, PartnerForm
 
 
@@ -53,3 +53,7 @@ def sport(request):
         context=context_dict,
         template_name="app_coder/sport.html"
     )
+    
+
+def contact_us(request):
+    contact_us = Contact_us.objets.all()
