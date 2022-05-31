@@ -10,7 +10,7 @@ from app_coder.models import Sport, Partner, Profesor, Contact_us
 # Create your views here.
 
 def index(request):
-    return render(request, "app_coder/index.html")
+    return render(request, "app_coder/home.html")
 
 
 def profesors(request):
