@@ -26,4 +26,4 @@ class Partner(models.Model):
 class Contact_us(models.Model):
     name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    pthone = models.models.PhoneNumberField(+54(""))
+    pthone = models.PhoneNumberField(+54(""))
