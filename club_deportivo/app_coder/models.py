@@ -1,5 +1,4 @@
-from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField         
+from django.db import models         
 
 # Create your models here.
 
@@ -26,4 +25,4 @@ class Partner(models.Model):
 class Contact_us(models.Model):
     name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    pthone = models.PhoneNumberField(+54(""))
+    pthone = models.IntegerField(max_length=15)
