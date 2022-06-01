@@ -1,7 +1,7 @@
 import datetime
 from django import forms
 from django.forms import ModelForm
-from app_coder.models import Profesor, Sport, Partner, Contact_us
+from app_coder.models import Profesor, Sport, Partner
 
 #class SportForm(forms.Form):
 #    name = forms.CharField(max_length=40, min_length=3, label='Nombre')
@@ -39,10 +39,7 @@ class PartnerForm(ModelForm):
 
 #    is_delivered = forms.BooleanField(label='Entregado', required=False)
 
-class Contact_usForm(ModelForm):
-     class Meta:
-         model = Contact_us
-         fields = '__all__'
+
 
 
 #class Contact_usForm(forms.Form):
