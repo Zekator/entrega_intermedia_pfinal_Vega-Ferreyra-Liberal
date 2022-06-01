@@ -22,7 +22,3 @@ class Partner(models.Model):
     email = models.EmailField()
     
     
-class Contact_us(models.Model):
-    name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    pthone = models.IntegerField()
