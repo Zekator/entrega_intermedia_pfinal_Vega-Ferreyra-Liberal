@@ -1,0 +1,10 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block app_coder_content %}
+
+<h2>Detalle de Profesores</h2>
+<hr></hr>
+<p><h3>Profesor: {{ profesor.name }}</h3></p>
+<p><h4>ID: {{ profesor.code }}</h4></p>
+<p><a class="btn2 btn-primary" href="{% url 'app_coder:profesor_list' %}">Regresar a la lista de profesores</a></p>
+{% endblock %}

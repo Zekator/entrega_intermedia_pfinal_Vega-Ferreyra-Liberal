@@ -1,14 +1,14 @@
 {% extends "app_coder/index.html" %}
 {% load static %}
-{% block app_coder_content %}
+{% block contenidoQueCambia %}
 
-<h2>Formulario para edición del profesor {{profesor.name}} </h2>
+<h2>Listado de Deportes</h2>
 <hr></hr>
 
 <form action="" method="POST">
     {% csrf_token %}
 
-    {{ profesor_form.as_p }}
+    {{ sports_form.as_p }}
 
     <input type="submit" class="btn btn-primary" value="Crear profesor" />
 

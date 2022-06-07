@@ -59,7 +59,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <a class="navbar-brand" href="#home">
-                                            <img src="{% static 'app_coder/assets/images/logo_penarol.png' %}" width="60" height="60">
+                                            <img src="{% static 'app_coder/assets/images/logo_penarol.png' %}" width="20" height="20">
                                         </a>
                                     </div>
 
@@ -87,229 +87,41 @@
             </div>
         </header> <!--End of header -->
 
-
-
         <section id="home" class="home">
             <div class="home_overlay">
                 <div class="container">
                     <div class="row">
                         <div class="main_slider_area">
                             <div class="slider">
-                                <div class="single_slider">
-                                    <h2>BIENVENIDOS AL CLUB SOCIAL Y DEPORTIVO  URU-ARG<h2>
-                                    <p> Un lugar para la familia</p>
+                                <div class="single-slider">
+                                    <h4 style="color:blue">BIENVENIDOS AL CLUB SOCIAL Y DEPORTIVO  URU-ARG</h4>
+                                    <p style="color:whitesmoke"> Un lugar para la familia<p>
                                 </div>
                             </div>
+                            <br>
+                            {% block app_coder_content %}
+
+                            {% endblock %}  
+                            <br>
                         </div>
                     </div>
                 </div>
             </div>
         </section><!-- End of Banner Section -->
-
-
-        <section id="about" class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="main_about_area">
-                        <div class="features_area">
-                            <div class="col-sm-3">
-                                <div class="single_features">
-                                    <div class="feature_icon"><i class="lnr lnr-cloud"></i></div>
-                                    <h2>Espacios de esparcimiento</h2>
-                                    <p> Un lugar donde disfrutar en familia practicando deportes </p>
-                                    <a href="">Ver mas... →</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="single_features">
-                                    <div class="feature_icon"><i class="lnr lnr-cloud"></i></div>
-                                    <h2>Canchas de futbol de cesped sintetico</h2>
-                                    <p>Para jugar con amigos y despues disfrutar de las instalaciones.</p>
-                                    <a href="">Reserva tu turno aca →</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="single_features">
-                                    <div class="feature_icon"><i class="lnr lnr-cloud"></i></div>
-                                    <h2>Mini basquet y cancha de dimensiones profesional</h2>
-                                    <p> No te quedes sin el turno, descuento para socios </p>
-                                    <a href="">Clic aca →</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="first_fitness_area">
-                        <div class="col-sm-4 no-padding">
-                            <div class="single_left_first_fitness text-center">
-                                <div class="left_first_fitness_heading">
-                                    <h5>Clases personalizadas</h5>
-                                    <h3>fitness</h3>
-                                    <h3>funcional</h3>
-                                    <h3>Crossfit</h3>
-                                </div>
-                                <div class="left_first_fitness_icon">
-                                    <i class="lnr lnr-drop"></i>
-                                </div>
-                                <div class="left_first_fitness_content">
-                                    <p>Animate a probar de las clases personalizadas, contamos con profesores capacitados, materiales y espacios
-                                    para el mejor desempeño de la actividad fisica</p>
-                                    <a href="">Seguir leyendo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 no-padding">
-                            <div class="single_right_first_fitness">
-                                <div class="single_right_first_fitness_img">
-                                    <img src="{% static 'app_coder/assets/images/ftnes11.jpg' %}" alt="" />
-                                </div>
-                                <div class="single_right_first_fitness_content">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="summer" class="summer">
-            <div class="container">
-                <div class="row">
-                    <div class="main_summer_area">
-                        <div class="single_summer">
-                            <div class="col-sm-4 no-padding">
-                                <div class="single_summer_item">
-                                    <div class="single_summer_item_img">
-                                        <img src="{% static 'app_coder/assets/images/sum1.jpg'%}" alt="" />
-                                    </div> 
-                                    <div class="single_summer_item_left_content">
-                                        <h5>Running</h5>
-                                        <h3>lifestyle</h3>
-                                        <p>Los profes mas capacitados para ayudarte a cumplir con tus metas. 
-                                            5-10-21 y 42K</p>
-                                    </div>
-                                </div> 
-                            </div>
-                            <div class="col-sm-8 no-padding">
-                                <div class="single_summer_item_right">
-                                    <div class="single_summer_item_top_content">
-                                        <p class="s_item_content_left">
-                                            Temporada de verano 
-                                        </p>
-                                        <p class="s_item_content_right">
-                                            health & fitness <span class="icon"><i class="lnr lnr-tag"></i></span>
-                                        </p>
-                                    </div>
-                                    <div class="single_summer_item_img_right">
-                                        <img src="{% static 'app_coder/assets/images/sum2.jpg' %}" alt="" />
-                                    </div>
-
-                                    <div class="single_summer_item_bottom_content">
-                                        <h2>Diversion de verano!</h2>
-                                        <p>La pileta habilitada para socios, si no lo sos, consulta por promociones.</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="main_summer_area2">
-                        <div class="single_summer2">
-                            <div class="col-sm-8 no-padding">
-                                <div class="single_summer_item2">
-                                    <div class="single_summer_item_img2">
-                                        <img src="{% static 'app_coder/assets/images/sum3.jpg' %}" alt="" />
-                                    </div> 
-                                    <div class="single_summer_item_left_content2">
-                                        <h2>get involved in yourself</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                            Ut enim ad minim veniam, quis nostrud.</p>
-                                    </div>
-                                </div> 
-                            </div>
-                            <div class="col-sm-4 no-padding">
-                                <div class="single_summer_item2_righ">
-
-                                    <div class="single_summer_item_img2_right">
-                                        <img src="{% static 'app_coder/assets/images/sum4.jpg' %}" alt="" />
-                                    </div>
-
-                                    <div class="single_summer_item_bottom_content2_right">
-                                        <h5>improve your</h5>
-                                        <h2>eating habits</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                            Ut enim ad minim veniam, quis nostrud.</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        
+        
+        <div class="col-sm-6">
+            <div class="single_widget single_top_widget_right_socail">
+                <h4>Siguenos en nuestras redes</h4>
+                
+                <div class="socail_area">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-youtube"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
                 </div>
             </div>
-        </section>
-
-
-        <section id="bigidea" class="bigidea">
-            <div class="container">
-                <div class="row">
-                    <div class="main_bigidea_area">
-                        <h2>TE ESPERAMOS EN CLUB SOCIAL Y DEPORTIVO</h2>
-                        <p>El lugar de encuentro de los amigos y la familia</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <footer id="footer" class="footer">
-            <div class="container">
-                <div class="row">
-
-                    <div class="footer_widget_area">
-                        <div class="col-sm-4">
-                            <div class="single_widget">
-                                <h4>Resources</h4>
-                                <p>Easily manage your inspiration and work-in-progress by dragging images into projects and sharable client groups. 
-                                    work-in-progress by dragging images into projects and sharable client group</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-
-                            <div class="single_top_widget_right">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="single_widget single_top_widget_right_about">
-                                            <h4>About us</h4>
-                                            <p>Easily manage your inspiration and work-in-progress by dragging images into projects and sharable client groups. 
-                                                work-in-progress by dragging images into projects and sharable client group</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="single_widget single_top_widget_right_socail">
-                                            <h4>Siguenos en nuestras redes</h4>
-                                            
-                                            <div class="socail_area">
-                                                <a href=""><i class="fa fa-facebook"></i></a>
-                                                <a href=""><i class="fa fa-twitter"></i></a>
-                                                <a href=""><i class="fa fa-youtube"></i></a>
-                                                <a href=""><i class="fa fa-linkedin"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>                        
 
                             <div class="single_bottom_widget">
                                 <div class="form-group">

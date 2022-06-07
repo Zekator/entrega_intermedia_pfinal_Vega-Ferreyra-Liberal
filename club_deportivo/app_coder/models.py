@@ -1,4 +1,5 @@
-from django.db import models         
+from tokenize import Name
+from django.db import models
 
 # Create your models here.
 
@@ -8,9 +9,9 @@ class Sport(models.Model):
 
 
 class Profesor(models.Model):
-    name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    sport = models.CharField(max_length=30)
+    Nombre = models.CharField(max_length=30)
+    Apellido = models.CharField (max_length=50)
+    Deporte = models.CharField(max_length=30)
     num_id = models.IntegerField()
     email = models.EmailField()
 
@@ -20,5 +21,4 @@ class Partner(models.Model):
     last_name = models.CharField(max_length=30)
     num_id = models.IntegerField()
     email = models.EmailField()
-    
-    
+

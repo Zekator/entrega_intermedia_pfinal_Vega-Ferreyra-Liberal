@@ -3,8 +3,10 @@ from django.db.models import Q
 from django.forms.models import model_to_dict
 from django.http import HttpResponse, request
 from django.template import loader
+from django.urls import reverse_lazy
 from app_coder.models import Sport, Partner, Profesor
 from app_coder.forms import SportForm, ProfesorForm, PartnerForm
+from django.views.generic import UpdateView, CreateView, DeleteView,ListView,FormView
 
 
 # Create your views here.
@@ -51,15 +53,11 @@ def sport(request):
     return render(
         request=request,
         context=context_dict,
-        template_name="app_coder/sport.html"
+        template_name="app_coder/sports.html"
     )
     
 
-def profesorsFormulario(request):
-    return render(request, "app_coder/cursoFormulario.html")
-
-
-def profesor_forms_django(request):
+def profesor_forms(request):
     if request.method == 'POST':
         profesor_form = ProfesorForm(request.POST)
         if profesor_form.is_valid():
@@ -84,10 +82,40 @@ def profesor_forms_django(request):
 
     profesor_form = ProfesorForm(request.POST)
     context_dict = {
-        'profesor_form': profesor_form
+        'profesor_forms': profesor_form
     }
     return render(
         request=request,
         context=context_dict,
-        template_name='app_coder/profesor_django_forms.html'
+        template_name='app_coder/profesor_forms.html'
     )
+
+class ProfesorForm(FormView):
+    model = Profesor
+    form_class = ProfesorForm
+    template_name = 'profesor_forms'
+    
+
+class ProfesorList(ListView): 
+    model = Profesor
+    form_class = ProfesorForm
+    template_name = 'profesor_list'
+        
+    
+class ProfesorCreate(CreateView):
+    model = Profesor
+    form_class = ProfesorForm
+    template_name = 'profesor-create'
+    success_url: reverse_lazy ('app_coder:profesor-list')
+
+class ProfesorUpdate(UpdateView):
+    model = Profesor
+    form_class = ProfesorForm
+    template_name = 'profesor-update'
+
+
+class ProfesorDelete(DeleteView):
+    model = Profesor
+    form_class = ProfesorForm
+    template_name = 'profesor-delete'
+
